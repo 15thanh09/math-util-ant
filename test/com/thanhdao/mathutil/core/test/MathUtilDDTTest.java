@@ -15,7 +15,8 @@ import org.junit.runners.Parameterized;
  *
  * @author Admin
  */
-@RunWith(value = Parameterized.class)
+
+
 // class này chuẩn bị chơi trò tách data ra khỏi câu lệnh xanh đỏ cho dễ kiểm soát
 // các hoạt động test case 
 // dịch để giúp hiện thực hóa ý tưởng DDT
@@ -23,11 +24,10 @@ import org.junit.runners.Parameterized;
 // assertEquals()
 // ép phải viết code theo cách nào định trước đó mới chạy được
 // thư viện đó đc gọi là tên mới: FRAMEWORK
+@RunWith(value = Parameterized.class)
 public class MathUtilDDTTest {
-
     public MathUtilDDTTest() {
     }
-
     // tạo 1 mảng return mảng 2 chiều
     @Parameterized.Parameters
     public static Object[][] initData() {
