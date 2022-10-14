@@ -17,18 +17,47 @@ public class MathUtil {
     //        0! = 1! = 1
     //        chỉ tính n từ 0..20, vì
     //        21! vượt quá 18 con số 0, vượt long
+//    public static long getFactorial(int n){
+//        if (n < 0 || n > 20){
+//            throw new IllegalArgumentException("Invalid n. N must be between 0...20");
+//        }
+//        if (n == 0 || n == 1){
+//            return 1;
+//        }
+//        long product = 1; //biến tích lũy acc/accomulation
+//        for (int i = 2; i <= n; i++) {
+//            product *= i; 
+//        }
+//        return product;
+//    }
+    
+    
+    // 14/10/2022
+    // viết hàm tính giai thừa theo style đệ quy !! RECURSION
+    // n! = 1.2.3.4.5....n4
+    // 5! = 1.2.3.4.5
+    // 5! = 4! x 5 = 5 x 4!
+    // 4! = 1.2.3.4 = 3! x 4 
+    // 3! ...
+    // 2! ...
+    // 1! ...
+    
+    // n! = n x (n -1)!
+    // lặp lại chính mình với quy mô nhỏ hơn
+    // n! = ~~~ RETURN N X (N-1)!
+    // CHỮ GIAI THỪA XUẤT HIỆN 2 LẦN
+    /*
+    
+    */
     public static long getFactorial(int n){
-        if (n < 0 || n > 20){
-            throw new IllegalArgumentException("Invalid n. N must be between 0...20");
-        }
-        if (n == 0 || n == 1){
-            return 1;
-        }
-        long product = 1; //biến tích lũy acc/accomulation
-        for (int i = 2; i <= n; i++) {
-            product *= i; 
-        }
-        return product;
+//        if (n < 0 || n > 20){
+//            throw new IllegalArgumentException("Invalid n. N must be between 0...20");
+//        }
+        if (n == 0 || n == 1)
+            return 1; // CHỐT DỪNG ĐỆ QUY 
+        // TỪ 2 GIAI THỪA LÀ ĐOẠN CODE DƯỚI ĐÂY
+        return  n* getFactorial(n -1); 
+        
     }
 }
 
